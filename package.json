@@ -1,6 +1,6 @@
 {
   "name": "quickerr",
-  "version": "1.0.0",
+  "version": "0.1.4",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,8 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jest --runInBand .",
-    "postinstall": "tsc --outDir ./dist"
+    "test": "jest --runInBand ."
   },
   "keywords": [],
   "author": "",
