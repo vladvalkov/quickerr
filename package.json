@@ -1,7 +1,10 @@
 {
   "name": "quickerr",
   "version": "0.0.0",
-  "description": "",
+  "description": "The simpler errors in Node.js",
+  "repository": {
+    "url": "https://github.com/vladvalkov/quickerr"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,8 +15,8 @@
     "test": "jest --runInBand ."
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Vlad Valkov",
+  "license": "MIT",
   "dependencies": {
     "typescript": "^5.7.2"
   },
