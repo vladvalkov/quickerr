@@ -10,11 +10,17 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-tags: 'true'
       - uses: pnpm/action-setup@v4
         with:
           version: 9
+
       - name: Install dependencies
         run: pnpm install
+
+      - name: Bump version
+        run: pnpm version from-git --no-git-tag-version
 
       - name: Build
         run: pnpm build
@@ -22,4 +28,4 @@ jobs:
       - name: Publish
         run: pnpm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} --no-git-checks
